@@ -1,6 +1,6 @@
 <?php 
 
-# Conexão com o banco
+# Conexão com o banco de dados
 
 $localhost = 'localhost'; 
 $usario = 'root';
