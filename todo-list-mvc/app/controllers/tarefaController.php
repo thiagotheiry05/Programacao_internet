@@ -25,6 +25,20 @@ class TarefaController {
         }
         header("Location: index.php"); 
     }
+
+    public function editar() {
+        if (isset($_GET['id'])) {
+            $tarefa = $this->tarefaModel->buscarPorId($_GET['id']);
+            include __DIR__ . '/../views/editar.php';
+        }
+    }
+
+    public function atualizar() {
+        if (isset($_POST['id']) && isset($_POST['descricao'])) {
+            $this->tarefaModel->criar($_POST['descricao']);
+        }
+        header("Location: index.php");
+    }
 }
 
 ?>

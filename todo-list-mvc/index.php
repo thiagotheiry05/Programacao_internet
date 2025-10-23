@@ -7,11 +7,20 @@ $action = $_GET['action'] ?? 'index' ;
 
 switch ($action) {
     case 'criar':
-        $controller->criar(); 
-    case 'excluir': 
-        $controller->excluir(); 
-    default: 
-        $controller->index(); 
+        $controller->criar();
+        break;
+    case 'excluir':
+        $controller->excluir();
+        break;
+    case 'editar':
+        $controller->editar();
+        break;
+    case 'atualizar':
+        $controller->atualizar();
+        break;
+    default:
+        $controller->index();
+        break;
 }
 
 ?>
