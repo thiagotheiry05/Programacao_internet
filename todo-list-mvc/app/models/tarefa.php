@@ -11,7 +11,7 @@ class Tarefa{
 
     ## Listar 
 
-    public function listarAtivas(){
+    public function listar() {
         $tarefas = [];
         $sql = "SELECT * FROM tarefas ORDER BY data_criacao DESC"; 
         $resultado = $this->conn->query($sql); 
@@ -23,10 +23,6 @@ class Tarefa{
         }
 
         return $tarefas;
-    }
-
-    public function listar() {
-    return []; 
     }
 
     ## Criar 
@@ -49,7 +45,7 @@ class Tarefa{
     public function editar($id, $descricao){
         $id = intval($id);
         $descricao = $this->conn->real_escape_string($descricao);
-        $sql = "UPDATE tarefas SET descricao = '$descricao' WHERE id = $id";
+        $sql = "UPDATE tarefas SET descricao = '$descricao' WHERE id = 1";
         return $this->conn->query($sql);
     }
 

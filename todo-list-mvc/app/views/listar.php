@@ -24,7 +24,7 @@
             <?php foreach ($tarefas as $tarefa): ?>
                 <li>
                     <?php echo htmlspecialchars($tarefa['descricao']); ?>
-                    <a href="index.php?action=excluir&delete=<?php echo $tarefa['id']; ?>">Excluir</a>
+                    <a href="index.php?action=editar&id=<?php echo $tarefa['id']; ?>">Excluir</a>
                     <a href="index.php?action=editar&id=<?php echo $tarefa['id']; ?>">Editar</a>
                 </li>
             <?php endforeach; ?>
